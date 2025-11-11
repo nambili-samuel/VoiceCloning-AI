@@ -18,12 +18,13 @@ def run_grok_agent():
         print("Run: python main.py --clone-voice --audio-dir data/raw_audio/your_voice --speaker-name your_voice")
         return
     
-    # Initialize Grok AI agent (replace with your xAI API key)
-    grok_api_key = "put your Grok API key here"  # Get from https://api.x.ai/
+    # Initialize Grok AI agent - USER MUST SET THEIR OWN API KEY
+    grok_api_key = "YOUR_GROK_API_KEY_HERE"  # Get from https://api.x.ai/
     
-    if grok_api_key == "put your Grok API key here":
+    if grok_api_key == "YOUR_GROK_API_KEY_HERE":
         print("Please set your Grok API key in the script")
         print("You can get one from: https://api.x.ai/")
+        print("Replace YOUR_GROK_API_KEY_HERE with your actual key")
         return
     
     agent = AIAgent(
