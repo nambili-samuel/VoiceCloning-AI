@@ -1,31 +1,312 @@
 # VoiceCloning AI Agent 🎤🤖
 
-A comprehensive Python project that clones your voice and uses it with AI agents (Grok, OpenAI) for natural conversations.
+![Thumbnail](screenshot-3.JPG)
+
+A comprehensive Python project that clones your voice and integrates it with AI agents (Grok, OpenAI) for natural, dynamic, and intelligent conversations.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![AI](https://img.shields.io/badge/AI-Voice%20Cloning-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+---
+
 ## ✨ Features
 
-- **🎤 Voice Cloning**: Clone your voice using Bark AI
-- **🤖 AI Integration**: Grok and OpenAI support
-- **🗣️ Real-time Conversation**: Voice-activated AI assistant
-- **⚡ Multiple Modes**: Wake word, interactive, and voice-only modes
-- **🔧 Customizable**: Easy configuration and setup
+- 🎤 **Voice Cloning** — Clone your voice using Bark AI  
+- 🤖 **AI Integration** — Supports Grok and OpenAI APIs  
+- 🗣️ **Real-Time Conversations** — Voice-activated AI assistant  
+- ⚡ **Multiple Modes** — Wake word, interactive, and voice-only modes  
+- 🔧 **Customizable** — Easy configuration and setup  
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
 - Python 3.8+
 - 8GB+ RAM (16GB recommended)
 - 10GB+ free storage for models
 - Microphone and speakers
 
+---
+
 ### Installation
 
-1. **Clone the repository**
 ```bash
 git clone https://github.com/nambili-samuel/VoiceCloning-AI.git
 cd VoiceCloning-AI
+pip install -r requirements.txt
+python setup_project.py
+```
+
+---
+
+## 🗣️ Basic Usage
+
+### Record your voice
+```bash
+python record_voice.py
+```
+
+### Clone your voice
+```bash
+python main.py --clone-voice --audio-dir data/raw_audio/your_voice --speaker-name your_voice
+```
+
+### Run the AI agent
+```bash
+python main.py --run-agent
+```
+
+---
+
+## 📁 Project Structure
+
+```
+VoiceCloning-AI/
+├── config/
+│   ├── settings.py
+│   ├── api_keys.py
+│   └── __init__.py
+├── data/
+│   ├── raw_audio/
+│   ├── processed_audio/
+│   └── models/
+├── src/
+│   ├── voice_cloning.py
+│   ├── ai_agent.py
+│   ├── grok_client.py
+│   ├── tts_engine.py
+│   ├── audio_processing.py
+│   └── __init__.py
+├── examples/
+│   ├── run_agent.py
+│   ├── clone_voice.py
+│   └── __init__.py
+├── training/
+│   ├── train_voice_clone.py
+│   └── __init__.py
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🔧 Configuration
+
+### API Keys Setup
+
+Create a file `config/api_keys.py`:
+
+```python
+# Get your Grok API key from https://api.x.ai/
+GROK_API_KEY = "your_grok_api_key_here"
+
+# Optional: OpenAI API key
+OPENAI_API_KEY = "your_openai_key_here"
+```
+
+Alternatively, set them as environment variables:
+```bash
+# Windows
+set GROK_API_KEY=your_key_here
+set OPENAI_API_KEY=your_key_here
+
+# macOS/Linux
+export GROK_API_KEY=your_key_here
+export OPENAI_API_KEY=your_key_here
+```
+
+---
+
+## 🎧 Voice Recording Guide
+
+- **Format**: WAV (uncompressed)  
+- **Sample Rate**: 22050 Hz  
+- **Channels**: Mono  
+- **Duration**: 5–10 minutes total  
+- **Environment**: Quiet room, minimal background noise  
+
+### Record using the built-in recorder:
+```bash
+python record_voice.py
+```
+
+Place your recordings under:
+```
+data/raw_audio/your_voice/
+```
+
+---
+
+## 🧠 Usage Examples
+
+### Voice Cloning
+```bash
+python main.py --clone-voice --audio-dir data/raw_audio/your_voice
+python main.py --test-voice --speaker-name your_voice
+```
+
+### Full AI Agent
+```bash
+python main.py --run-agent
+python main.py --run-agent --speaker-name your_voice
+```
+
+### Command-Line Options
+```bash
+python main.py --clone-voice --audio-dir ./my_voice --speaker-name sam
+python main.py --test-voice --speaker-name sam
+python main.py --run-agent
+python main.py --help
+```
+
+---
+
+## 🔌 API Support
+
+### Grok AI (xAI)
+- Default provider  
+- Witty and humorous responses  
+- Get API key from: [https://api.x.ai](https://api.x.ai)
+
+### OpenAI (Alternative)
+- GPT-3.5 / GPT-4 support  
+- Configurable via `src/ai_agent.py`
+
+---
+
+## 🧩 Development Guide
+
+### Add New Features
+- Add new modules to `src/`
+- Update configurations in `config/settings.py`
+- Add sample usage in `examples/`
+
+### Testing
+```bash
+python check_imports.py
+python test_grok.py
+python test_setup.py
+```
+
+---
+
+## ⚙️ Performance Notes
+
+- First run downloads ~5GB of Bark models (be patient)
+- Longer recordings = better voice fidelity
+- GPU recommended but not required
+
+---
+
+## 🪄 Installation Notes
+
+### System Requirements
+**Minimum**
+- Python 3.8+
+- 8GB RAM
+- 10GB storage
+
+**Recommended**
+- Python 3.10+
+- 16GB RAM
+- NVIDIA GPU (8GB VRAM)
+
+### Setup Steps
+1. Clone the repo  
+2. Create virtual environment  
+3. Install dependencies  
+4. Run `setup_project.py`  
+5. Add your API keys  
+
+If you face issues, run:
+```bash
+python verify_setup.py
+```
+
+---
+
+## 🧰 Troubleshooting
+
+| Issue | Solution |
+|-------|-----------|
+| `ModuleNotFoundError` | Run: `pip install -r requirements.txt` |
+| Bark model stuck | Restart and re-run |
+| Audio issues | `pip install pyaudio` |
+| Out of memory | Close other apps / use smaller chunks |
+
+---
+
+## 💻 verify_setup.py
+
+```python
+"""
+Setup Verification Script
+Run this to verify installation completeness
+"""
+import os, importlib
+
+def check_imports():
+    modules = ['torch','librosa','soundfile','speech_recognition','bark','requests','numpy','pyaudio']
+    print("🔍 Checking imports...")
+    for m in modules:
+        try: importlib.import_module(m); print(f"  ✅ {m}")
+        except ImportError: print(f"  ❌ {m}")
+
+def check_dirs():
+    for d in ['src','config','data/raw_audio','data/processed_audio','data/models','examples','training']:
+        print(f"{'✅' if os.path.exists(d) else '❌'} {d}/")
+
+if __name__ == "__main__":
+    print("🚀 VoiceCloning AI - Setup Verification\n" + "="*50)
+    check_imports(); check_dirs()
+    print("="*50)
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!
+
+1. Fork the repo  
+2. Create a branch  
+3. Commit changes  
+4. Submit a pull request  
+
+### Code Style
+- Follow PEP 8  
+- Format using **Black**  
+- Add docstrings & type hints  
+
+---
+
+## 🧾 License
+
+**MIT License**  
+Copyright (c) 2024 Nambili Samuel  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files...
+
+(Full license text included in `LICENSE`)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Bark** for voice synthesis  
+- **xAI Grok** for AI capabilities  
+- **OpenAI** for optional GPT integration  
+
+---
+
+## ⭐ Support
+
+If you encounter issues:
+- Check the Troubleshooting section  
+- Review GitHub Issues  
+- Create a new Issue with full logs  
+
+💡 *If this project helps you, please give it a star!*
