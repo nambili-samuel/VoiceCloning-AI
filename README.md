@@ -293,12 +293,23 @@ We welcome contributions!
 
 ## 🧾 License
 
-**MIT License**  
-Copyright (c) 2024 Nambili Samuel  
+This project is licensed under the **MIT License** — one of the most permissive open-source licenses available.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files...
+Copyright (c) 2025 **Nambili Samuel**
 
-(Full license text included in `LICENSE`)
+Under the MIT License, you are free to:
+
+- **Use** the software for any purpose, including commercial applications.  
+- **Modify** the source code to suit your own needs.  
+- **Distribute** copies of the original or modified software.  
+- **Sub-license** your modified versions under the same terms.  
+
+However, the license requires that:
+
+- The original **copyright notice** and **permission notice** are included in all copies or substantial portions of the software.  
+- The software is provided **“as is”**, without warranty of any kind — meaning the author is **not liable** for any damages or issues that may arise from its use.
+
+For complete details, please refer to the full license text included in the [`LICENSE`](./LICENSE) file.
 
 ---
 
