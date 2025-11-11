@@ -1,0 +1,26 @@
+VoiceCloning-AI/
+├── 📁 config/              # Configuration files
+│   ├── settings.py        # Application settings
+│   ├── api_keys.py        # API keys (create this)
+│   └── __init__.py
+├── 📁 data/               # Data directories
+│   ├── raw_audio/         # Your voice recordings
+│   ├── processed_audio/   # Processed audio files
+│   └── models/           # Trained voice models
+├── 📁 src/               # Source code
+│   ├── voice_cloning.py  # Bark voice cloning
+│   ├── ai_agent.py       # AI agent logic
+│   ├── grok_client.py    # Grok API client
+│   ├── tts_engine.py     # Text-to-speech engine
+│   ├── audio_processing.py
+│   └── __init__.py
+├── 📁 examples/          # Example scripts
+│   ├── run_agent.py      # Main agent runner
+│   ├── clone_voice.py    # Voice cloning examples
+│   └── __init__.py
+├── 📁 training/          # Training scripts
+│   ├── train_voice_clone.py
+│   └── __init__.py
+├── 📄 main.py            # Main entry point
+├── 📄 requirements.txt   # Python dependencies
+└── 📄 README.md          # This file

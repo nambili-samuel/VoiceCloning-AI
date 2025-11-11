@@ -1,0 +1,28 @@
+
+## 2. Installation Guide
+
+**INSTALLATION.md**
+```markdown
+# Installation Guide
+
+## System Requirements
+
+### Minimum
+- Python 3.8 or higher
+- 8GB RAM
+- 10GB free storage
+- Windows 10/11, macOS, or Linux
+
+### Recommended
+- Python 3.10+
+- 16GB RAM
+- 20GB free storage
+- NVIDIA GPU with 8GB+ VRAM
+- Windows 11 or Ubuntu 20.04+
+
+## Step-by-Step Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/nambili-samuel/VoiceCloning-AI.git
+cd VoiceCloning-AI
