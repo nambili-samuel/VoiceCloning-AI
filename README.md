@@ -2,7 +2,15 @@
 
 ![Thumbnail](screenshot-3.JPG)
 
-A comprehensive Python project that clones your voice and integrates it with AI agents (Grok, OpenAI) for natural, dynamic, and intelligent conversations.
+**VoiceCloning-AI** is developed by [Science Techniz](https://www.sciencetechniz.com/), a research AI startup.  
+This is a comprehensive Python project that allows you to clone your own voice and integrate it with AI agents ([Grok](https://grok.com/), OpenAI) for natural, dynamic, and intelligent conversations. Voice cloning is the process of synthesizing speech that replicates the tone, pitch, and speaking style of a specific person. Modern voice cloning systems leverage deep learning models trained on vast amounts of audio data to capture the unique acoustic and linguistic patterns that define an individual’s voice. Two key technologies that enable this are [HuBERT (Hidden-Unit BERT)](https://huggingface.co/docs/transformers/en/model_doc/hubert) and [BARK](https://huggingface.co/suno).
+
+HuBERT is a self-supervised speech representation model developed by Meta AI. It converts raw audio into discrete “speech units” that capture the underlying phonetic and linguistic content without requiring labeled data. In a voice cloning pipeline, HuBERT acts as a feature extractor, breaking down an existing voice sample into meaningful speech representations. These units encode how a person articulates words, including rhythm, pronunciation, and tone.
+
+BARK, developed by [Suno AI](https://suno.com/home), is a text-to-audio generation model that can produce highly realistic speech and even nonverbal sounds like laughter or breathing. Once a voice’s characteristics have been captured (e.g., via HuBERT or another embedding model), BARK can use this information to generate new audio that mimics the speaker’s voice from any input text. In essence, HuBERT provides the content representation, while BARK provides the generative synthesis.
+
+Together, HuBERT and BARK form a powerful framework for voice cloning. By first analyzing and encoding the vocal features of a reference sample and then using a generative model to recreate them, these systems can produce natural, expressive, and personalized speech outputs—allowing users to “clone” a voice for applications such as virtual assistants, dubbing, or personalized media content.
+
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![AI](https://img.shields.io/badge/AI-Voice%20Cloning-orange)
