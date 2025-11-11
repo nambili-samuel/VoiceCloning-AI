@@ -18,7 +18,7 @@ To get started, you need to install the following Python libraries: `bark`, `enc
 
 Currently, VoiceCloning-AI supports multiple languages including English, German, Spanish, French, Hindi, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, and Chinese (simplified). Support for Arabic, Bengali, and Telugu is coming soon.
 
-VoiceCloning-AI is a **local, private, and free** solution that leverages state-of-the-art AI models to provide realistic, expressive, and personalized voice cloning for a variety of applications.
+
 
 
 
