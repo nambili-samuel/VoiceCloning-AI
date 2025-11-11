@@ -2,13 +2,24 @@
 
 ![Thumbnail](screenshot-3.JPG)
 
-**VoiceCloning-AI** is developed by [Science Techniz](https://www.sciencetechniz.com/), a research AI startup. This is a comprehensive Python project that allows a person to clone the voice and integrate it with AI agents ([Grok](https://grok.com/), OpenAI) for natural, dynamic, and intelligent conversations. Voice cloning is the process of synthesizing speech that replicates the tone, pitch, and speaking style of a specific person. Modern voice cloning systems leverage deep learning models trained on vast amounts of audio data to capture the unique acoustic and linguistic patterns that define an individual’s voice. Two key technologies that enable this are [HuBERT (Hidden-Unit BERT)](https://huggingface.co/docs/transformers/en/model_doc/hubert) and [BARK](https://huggingface.co/suno).
+# VoiceCloning-AI
 
-HuBERT is a self-supervised speech representation model developed by Meta AI. It converts raw audio into discrete “speech units” that capture the underlying phonetic and linguistic content without requiring labeled data. In a voice cloning pipeline, HuBERT acts as a feature extractor, breaking down an existing voice sample into meaningful speech representations. These units encode how a person articulates words, including rhythm, pronunciation, and tone.
+**VoiceCloning-AI** is developed by [Science Techniz](https://www.sciencetechniz.com/), a research AI startup. This comprehensive Python project allows a person to **clone voices** and integrate them with AI agents like [Grok](https://grok.com/) or OpenAI for **natural, dynamic, and intelligent conversations**. It features a hyper-realistic AI Voice Cloner Desktop App that runs locally, ensuring **100% data privacy** and no costs to run.
 
-BARK, developed by [Suno AI](https://suno.com/home), is a text-to-audio generation model that can produce highly realistic speech and even nonverbal sounds like laughter or breathing. Once a voice’s characteristics have been captured (e.g., via HuBERT or another embedding model), BARK can use this information to generate new audio that mimics the speaker’s voice from any input text. In essence, HuBERT provides the content representation, while BARK provides the generative synthesis.
+Voice cloning, the process of **synthesizing a person's voice** using machine learning, has seen significant advancements in recent years. AI models such as `suno-ai/BARK` make it possible to generate **human-like audio from text inputs** with astonishing accuracy. Modern voice cloning systems leverage deep learning models trained on vast amounts of audio data to capture the unique acoustic and linguistic patterns that define an individual’s voice.
 
-Together, HuBERT and BARK form a powerful framework for voice cloning. By first analyzing and encoding the vocal features of a reference sample and then using a generative model to recreate them, these systems can produce natural, expressive, and personalized speech outputs—allowing users to “clone” a voice for applications such as virtual assistants, dubbing, or personalized media content.
+Two key technologies that enable this are [HuBERT (Hidden-Unit BERT)](https://huggingface.co/docs/transformers/en/model_doc/hubert) and [BARK](https://huggingface.co/suno). HuBERT, developed by Meta AI, is a **self-supervised speech representation model** that converts raw audio into discrete “speech units” capturing phonetic and linguistic content without requiring labeled data. In a voice cloning pipeline, HuBERT acts as a feature extractor, breaking down an existing voice sample into meaningful speech representations that encode rhythm, pronunciation, and tone.
+
+BARK, developed by [Suno AI](https://suno.com/home), is a **text-to-audio generation model** that can produce highly realistic speech, including nonverbal sounds like laughter or breathing. Once a voice’s characteristics are captured (e.g., via HuBERT), BARK can generate new audio that mimics the speaker’s voice from any input text. Together, HuBERT and BARK form a powerful framework for voice cloning: HuBERT provides the content representation, and BARK handles generative synthesis, resulting in natural, expressive, and personalized speech outputs. This allows users to “clone” a voice for virtual assistants, dubbing, or personalized media content.
+
+BARK has the capability to fully clone voices, including tone, pitch, emotion, and prosody, while also preserving music, ambient noise, and other elements from input audio. To mitigate misuse, audio history prompts are limited to a set of Suno-provided, fully synthetic options for each language, following the pattern `{lang_code}_speaker_{0-9}`.
+
+To get started, you need to install the following Python libraries: `bark`, `encodec`, `hubert`, `torchaudio`, `torch`, and `numpy`. Creating a voice clone sample requires an audio clip of approximately 5-12 seconds. For best results, generate multiple samples with your cloned voice until you find one that closely matches the source, then use that as the new history prompt for consistent outputs.
+
+Currently, VoiceCloning-AI supports multiple languages including English, German, Spanish, French, Hindi, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, and Chinese (simplified). Support for Arabic, Bengali, and Telugu is coming soon.
+
+VoiceCloning-AI is a **local, private, and free** solution that leverages state-of-the-art AI models to provide realistic, expressive, and personalized voice cloning for a variety of applications.
+
 
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
