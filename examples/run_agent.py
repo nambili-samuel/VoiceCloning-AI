@@ -19,9 +19,9 @@ def run_grok_agent():
         return
     
     # Initialize Grok AI agent (replace with your xAI API key)
-    grok_api_key = "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"  # Get from https://api.x.ai/
+    grok_api_key = "Grok API key here"  # Get from https://api.x.ai/
     
-    if grok_api_key == "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":
+    if grok_api_key == "Grok API key here":
         print("Please set your Grok API key in the script")
         print("You can get one from: https://api.x.ai/")
         return
